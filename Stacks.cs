@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace generics_dotnet
 {
@@ -7,9 +8,17 @@ namespace generics_dotnet
     {
         private IList<T> StackList = new List<T>();
 
-        public void Stackable(T item)
+        public void Push(T item)
         {
-            this.StackList.Add(item);
+            StackList.Add(item);
+            Console.WriteLine(item);
+        }
+
+        public T Pop()
+        {
+            var item = StackList.Last();
+            this.StackList.Remove(item);
+            return item;
         }
     }
 }

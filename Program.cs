@@ -8,9 +8,10 @@ namespace generics_dotnet
         {
             var numbers = new Stacks<int>();
             {
-                numbers.Stackable(2);
-                numbers.Stackable(3);
-                Console.WriteLine(numbers);
+                numbers.Push(2);
+                numbers.Push(3);
+                Console.WriteLine(numbers.Pop());
+                Console.WriteLine(numbers.Pop());
             }
         }
     }
