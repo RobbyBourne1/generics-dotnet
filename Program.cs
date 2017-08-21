@@ -6,7 +6,12 @@ namespace generics_dotnet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var numbers = new Stacks<int>();
+            {
+                numbers.Stackable(2);
+                numbers.Stackable(3);
+                Console.WriteLine(numbers);
+            }
         }
     }
 }
